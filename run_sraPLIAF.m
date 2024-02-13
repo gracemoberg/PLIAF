@@ -48,7 +48,6 @@ X(1,1) = -55; % voltage initial condition
 X(2,1) = 1; %g_sra initial condition
 
 
-
 % Runge-Kutta 4
 for k = 1:iter -1
     
@@ -81,15 +80,6 @@ xlabel('Time (ms)'); ylabel('Spike Rate')
 title('Spike Rate Adaptation');
 set(gca, 'fontsize', 18, 'linewidth', 2); box on;
 xlim([0, tfinal]);
-
-
-% % disp(soln(2,:))
-% plot(t, X(1,:))
-% % plot(t, X(2,:))
-% title('Leaky Integrate and Fire Model with Spike Rate Adaptation')
-% xlabel('t (ms)')
-% ylabel('V (mV)')
-
 
 
 
