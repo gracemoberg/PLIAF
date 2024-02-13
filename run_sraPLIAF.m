@@ -34,6 +34,12 @@ par.Tsra = 100;
 par.Deltag = 0.5;
 par.Ek = -90;
 
+% initialize time vec
+h = 0.25; % time step
+tfinal = 100; % total length of time in ms
+t = 0:h:tfinal;
+iter = length(t);
+
 % solns: first row voltage, second row is spike rate g_sra
 X = zeros(2, iter); 
 
@@ -41,11 +47,7 @@ X = zeros(2, iter);
 X(1,1) = -55; % voltage initial condition
 X(2,1) = 1; %g_sra initial condition
 
-% initialize time vec
-h = 0.25; % time step
-tfinal = 100; % total length of time in ms
-t = 0:h:tfinal;
-iter = length(t);
+
 
 % Runge-Kutta 4
 for k = 1:iter -1
